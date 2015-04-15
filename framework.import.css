@@ -1,0 +1,19 @@
+/*
+ * @author:colorcai;
+ * @date:2015/03/04;
+ * @content:demo;
+*/
+@charset "utf-8";
+
+body{color: #fff;}
+.hide{display: none!important;}
+body, html {margin: 0; overflow: hidden;font-family: \5FAE\8F6F\96C5\9ED1,Tohoma;
+    -webkit-transition: opacity 400ms;
+    -moz-transition: opacity 400m
+transition: opacity 400ms;
+}
+body,html {display: block; position: static; padding: 0; width: 100%; height: 100%; }
+.main .page_container {width: 100%; height: 100%;}
+.page{position: relative;overflow: hidden;}
+.inner{width: 100%;height: 100%;position: relative;}
+.inner .inner-bg{position:absolute;top:0;left:0;z-index: 0!important;}

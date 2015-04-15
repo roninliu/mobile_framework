@@ -1,0 +1,40 @@
+/*
+ * @author:colorcai;
+ * @date:2015/03/04;
+ * @content:demo;
+*/
+@charset "utf-8";
+/*@import "reset.import.css";*/
+/*@import "mobile_act_global.import.css";*/
+@import "framework.import.css";
+
+/*loading页面*/
+.loading{color: #333;text-align: center;height: 90px;position: relative;top:50%;margin-top:-45px;}
+.loading .load-percent{position: absolute;font-size: 12px;display: block;width: 3em;height: 3em;line-height: 3em;margin:0 auto;color: #fff;left: 50%;
+    margin-left: -1.5em;
+    top: 1.8em;}
+.loading .load-tips{padding: 0;margin:10px 0;font-size: 12px;}
+.loader--spinningDisc {
+    border: solid 0.5em #9b59b6;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    padding: 0.5em;
+    margin: 0 auto;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background: #3498db;
+    background-clip: content-box;
+    -webkit-animation: spinDisc 1.5s linear infinite;
+}
+@-webkit-keyframes spinDisc {
+    50% {
+        border-top-color: #3498db;
+        border-bottom-color: #3498db;
+        background-color: #2ecc71;
+    }
+    100% {
+        transform: rotate(1turn);
+    }
+}
+

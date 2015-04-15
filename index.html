@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>活动名称 - 黄钻特权 - QQ空间</title>
+    <meta name="keywords" content="QQ空间,黄钻空间装扮,黄钻特权,开通黄钻,黄钻活动,QQ空间活动,QQ空间交友,QQ空间明星,豪华版黄钻,年费黄钻,游戏特权,生活特权,基础特权,黄钻回馈" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--QQ分享使用-->
+    <meta itemprop="name" content="全民大电影 - 空间10周年 - QQ空间"/>
+    <meta itemprop="description" name="description"  content="请产品经理使用keywords造句，如：黄钻特权天天有，今天来抽大奖"/>
+    <meta itemprop="image" content="http://qzonestyle.gtimg.cn/aoi/sola/20150407145907_WGHDfZiYfg.jpg" />
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" href="index.css"/>
+<style>
+    html {
+        -webkit-user-select:none;
+        user-select:none;
+    }
+</style>
+</head>
+<body>
+<div class="loading" id="j-panel-loading">
+    <div class="loader-wrap">
+        <div class="loader loader--spinningDisc"></div>
+        <span class="load-percent">1%</span>
+        <p class="load-tips">资源加载中</p>
+    </div>
+</div>
+<div id="j-panel-main" class="main" style="display: none;">
+    <section class="page page1" style="background-color: #EBEBEB;">
+        <div class="page_container">
+            <div class="inner">
+                <!--背景-->
+                <div class="inner-bg"></div>
+                <!--这里开始写自定义元素--begin-->
+                    <!--code && html-->
+                    <h1>活动名称 - 黄钻特权 - QQ空间</h1>
+                <!--这里开始写自定义元素--end-->
+            </div>
+        </div>
+    </section>
+    <section class="page page2" style="background-color: #feb1a4;">
+        <div class="page_container">
+            <div class="inner">
+                <!--背景-->
+                <div class="inner-bg"></div>
+                <!--这里开始写自定义元素--begin-->
+                <!--code && html-->
+                <!--这里开始写自定义元素--end-->
+            </div>
+        </div>
+    </section>
+    <section class="page page3" style="background-color: #c16ebc;">
+        <div class="page_container">
+            <div class="inner">
+                <!--背景-->
+                <div class="inner-bg"></div>
+                <!--这里开始写自定义元素--begin-->
+                <!--code && html-->
+                <!--这里开始写自定义元素--end-->
+            </div>
+        </div>
+    </section>
+</div>
+<script src="http://qzonestyle.gtimg.cn/ac/lib/sea/2.1.2/sea.js"></script>
+<script src="http://qzonestyle.gtimg.cn/ac/lib/jquery/1.10.2/jquery.js"></script>
+<script>
+    seajs.use('http://qzonestyle.gtimg.cn/qzone/qzact/common.m/imageLoader/index.js?v=4', function(loader) {
+        var loaderDone = false; // 加载完成标志位
+        //图片名，由重构提供
+        var images = [
+            'sprite/style.png',
+            'sprite/words-imp.png',
+            'sprite/decoration-imp.png',
+            'img/1.jpg',
+            'img/2.jpg',
+            'img/3.jpg',
+            'img/4.jpg',
+            'img/5.jpg',
+            'img/6.jpg',
+            'img/7.jpg',
+            'img/8.jpg',
+            'img/9.jpg'
+        ];
+        // 匹配高清屏
+        if (window.devicePixelRatio >= 1.25) {
+            for (var i = 0, l = images.length; i < l; ++i) {
+                images[i] = images[i].replace(/\.(jpg|png)/, '@2x\.$1');
+            }
+        }
+        //得到完整图片路径
+        for (var i = 0, l = images.length; i < l; ++i) {
+            images[i] = [
+                /^(ttest|touch)/.test(location.hostname) ? 'http://m.isux.us' : 'http://qzonestyle.gtimg.cn',//域名
+                '/qz-act/mobile/20150202-love/',//目录
+                images[i],//名称
+                '?max_age=19830212&d=20150209171355'//时间戳
+            ].join('');
+        }
+        //开始加载图片
+        loader(images, function (percent) {
+            //加载完一张图片之后的回调函数
+            $('.load-percent').text(Math.floor(percent * 100) + '%');
+            if (percent === 1) {
+                //加载完所有图片之后
+                loaderDone ? loaderDone() : (loaderDone = true);
+                $('#j-panel-loading').fadeOut(function () {
+                    $('#j-panel-loading').remove();
+                    $('#j-panel-main').show();
+                    seajs.use('http://qzonestyle.gtimg.cn/qzone/qzact/common.m/pageScroll/index.js', function (PageScroll) {
+                        //开始初始化页面
+                        var $sectionSelector = $('#j-panel-main > section');
+                        PageScroll.init({
+                            container: '#j-panel-main',
+                            sectionSelector: 'section',
+                            scrollingSpeed: 800, // 滚动速度
+                            scrollDelay: 0,
+                            afterScroll: function (o) {//下一页加载完成之后回调函数（active类已在此之前默认添加）
+                                $sectionSelector.slice(0, o.index + 4).show();
+                            }
+                        });
+                        $(document).on('click', '.ele-arrow', function (evt) {
+                            PageScroll.scrollDown();
+                        });
+                    });
+                });
+            }
+        });
+
+    });
+</script>
+</body>
+</html>
